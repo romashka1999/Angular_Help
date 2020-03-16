@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-header-nav',
   templateUrl: './header-nav.component.html',
-  styleUrls: []
+  styles: ['a { cursor: pointer; }']
 })
 export class HeaderNavComponent implements OnInit {
 

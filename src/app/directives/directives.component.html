@@ -1,1 +1,5 @@
-<p>directives works!</p>
+<p appBasicHighlight>style with basic highlight directive</p>
+<p appBetterHighlight [hightlightColor]="'green'">style with better highlight directive</p>
+
+<p *appUnless ="true" > did not show </p>
+<p *appUnless ="false" > show </p>
