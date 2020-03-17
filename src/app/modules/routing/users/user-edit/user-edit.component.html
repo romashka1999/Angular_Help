@@ -1,5 +1,8 @@
 
 <h3 *ngIf="!allowEditUser">you can not editing</h3>
-<div *ngIf="allowEditUser">you can editing
-    
+<div *ngIf="allowEditUser">
+    <span>username</span>
+    <input type="text" name="username" id="" [(ngModel)]="username">
+    {{username}}
+    <button class="btn btn-danger" (click)="onUpdateUsername()">update userame</button>
 </div>

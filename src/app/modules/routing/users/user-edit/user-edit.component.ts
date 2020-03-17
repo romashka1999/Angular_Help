@@ -8,6 +8,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class UserEditComponent implements OnInit {
 
+  username='';
   allowEditUser = false;
 
   constructor(private userService: UsersService,
@@ -22,8 +23,10 @@ export class UserEditComponent implements OnInit {
     
   }
 
-  onUpdateUser() {
-    this.userService.updateUser({id:1, name:'ulala'});
+  onUpdateUsername() {
+    this.route.params.subscribe((params: Params) => {
+      const id = +params.id;
+      this.userService.updateUser({id, name: this.username});
+    })
   }
-
 }

@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-import { identifierModuleUrl } from '@angular/compiler';
+import { Subject } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
 })
 export class UsersService {
 
-    
+    userUpdated = new Subject();
+
     private users: any[] = [
         {
             id: 0,
@@ -31,11 +32,8 @@ export class UsersService {
     }
 
     updateUser(user: any) {
-        for(let usr of this.users) {
-            if(usr.id === user.id) {
-                usr = user;
-                break;
-            }
-        }
+        console.log(user);
+        this.users[user.id].name = user.name;
+        this.userUpdated.next('user updated');
     }
 }
