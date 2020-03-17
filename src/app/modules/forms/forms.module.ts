@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MainComponent } from './main/main.component';
 import { TemplateDrivenComponent } from './main/template-driven/template-driven.component';
@@ -18,7 +19,9 @@ const routes: Routes = [
   declarations: [MainComponent, TemplateDrivenComponent, ReactiveComponent],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forChild(routes)
   ]
 })
-export class FormsModule { }
+export class FormsModulee { }

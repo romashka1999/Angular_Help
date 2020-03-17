@@ -8,7 +8,7 @@ const routes: Routes = [
     {path: 'directives', loadChildren: () => import('./modules/directives/directives.module').then( m => m.DirectivesModule)}, // lazy loading
     {path: 'services', loadChildren: () => import('./modules/services/services.module').then( m => m.ServicesModule)}, // lazy loading
     {path: 'routing', loadChildren: () => import('./modules/routing/routing.module').then( m => m.RoutingModule)}, // lazy loading
-    {path: 'forms', loadChildren: () => import('./modules/forms/forms.module').then( m => m.FormsModule)}, // lazy loading
+    {path: 'forms', loadChildren: () => import('./modules/forms/forms.module').then( m => m.FormsModulee)}, // lazy loading
     {path: '**', component: NotFoundComponent}
 ];
 
