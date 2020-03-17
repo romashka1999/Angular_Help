@@ -1,1 +1,16 @@
-<div>usesr</div>
+
+
+<div class="row">
+    <div class="col-md-5">
+        <div>
+            <div *ngFor="let user of users" class="list-group">
+                <div class="list-group-item" style="border:1px solid red; cursor: pointer; margin-top: 5px" 
+                [routerLink]="[user.id]" [queryParams]="{ allowEdit: user.id%2===1 ? '0' : '1'}">{{user.id}} -- {{user.name}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-7">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+

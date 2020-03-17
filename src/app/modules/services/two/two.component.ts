@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MainService } from '../main.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-two',
@@ -7,7 +8,7 @@ import { MainService } from '../main.service';
 })
 export class TwoComponent implements OnInit , OnDestroy{
 
-  numDataSub: any;
+  numDataSub: Subscription;
   numData: number[];
 
   constructor(private mainService: MainService) { }
