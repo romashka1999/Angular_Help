@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+        <input type="text" class="form-control" [(ngModel)]="filteredColor" placeholder="FILTER with color">
+        <hr>
+        <button class="btn btn-primary" (click)="onAddCar()">add new Car</button>
+        <hr>
+        <br>
+        <h1>car color: {{ carColor | async }}</h1>
+        <br>
+        <ul class="list-group">
+          <li
+            class="list-group-item"
+            *ngFor="let car of cars | filter:filteredColor:'color' | sort:'name'"
+            [ngClass]="getStoreClasses(car)">
+            <strong>{{ car.name | shorten:4 }}</strong> - 
+            {{ car.model | uppercase }} - 
+            {{ car.color | uppercase }} - 
+            {{ car.released | date:'fullDate' | titlecase }}
+            <span
+              class="badge" style="float:right">
+              {{ car.store }}
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
