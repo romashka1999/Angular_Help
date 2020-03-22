@@ -16,7 +16,11 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [MainComponent, TemplateDrivenComponent, ReactiveComponent],
+  declarations: [
+    MainComponent, 
+    TemplateDrivenComponent, 
+    ReactiveComponent
+  ],
   imports: [
     CommonModule,
     FormsModule,

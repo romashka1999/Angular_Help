@@ -14,7 +14,12 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [PipesComponent, ShortenPipe, FilterPipe, SortPipe],
+  declarations: [
+    PipesComponent, 
+    ShortenPipe, 
+    FilterPipe, 
+    SortPipe
+  ],
   imports: [
     CommonModule,
     FormsModule,

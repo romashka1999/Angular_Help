@@ -18,7 +18,12 @@ const routes: Routes = [
 
 
 @NgModule({
-  declarations: [UsersComponent, UserComponent, UserEditComponent, MainComponent],
+  declarations: [
+    UsersComponent,
+    UserComponent, 
+    UserEditComponent, 
+    MainComponent
+  ],
   imports: [
     CommonModule,
     FormsModule,

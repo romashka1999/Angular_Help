@@ -10,7 +10,7 @@ import { AppROutingModule } from './app-routing.module';
   declarations: [
     AppComponent,
     HeaderNavComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
