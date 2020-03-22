@@ -1,1 +1,4 @@
-<button class="btn btn-danger" (click)='onLoadUsers()'>Load Users</button>
+<button class="btn btn-info" (click)='onLoadUsers()'>Load Users</button>
+<button class="btn btn-primary" (click)='onLogin()'>Login</button>
+<button class="btn btn-danger" (click)='onLogout()'>Logout</button>
+<p *ngIf="loading">Loading.. to authenticate</p>
